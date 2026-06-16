@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoleVibe | 頂級鞋類與潮流服飾生活商城</title>
+  <meta name="description" content="SoleVibe 結合極致避震科技與現代潮流美學，為您帶來最頂級的日常休閒鞋、商務正裝皮鞋、設計師飾品與實用鞋類配件。探索全系列商品，享受踩在雲朵般的行走體驗。">
+  <meta name="keywords" content="鞋類電商, 休閒鞋, 德比鞋, 牛仔外套, 連帽衛衣, 飾品項鍊, 鞋用配件, 洗鞋套組, 防水鞋套">
+  <meta name="author" content="SoleVibe Premium Group">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="SoleVibe Logo" class="logo-img">
+        <span>SOLE<span style="color: var(--accent-light)">VIBE</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active">首頁</a></li>
+          <li><a href="about.html">公司簡介</a></li>
+          <li><a href="casual.html">休閒鞋款</a></li>
+          <li><a href="formal.html">正式鞋款</a></li>
+          <li><a href="sports.html">運動鞋款</a></li>
+          <li><a href="accessories.html">鞋材與配件</a></li>
+          <li><a href="others.html">其它類</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="nav-btn" id="theme-toggle-btn" aria-label="切換主題" title="切換深淺色主題">
+          <!-- Dynamically loaded by main.js -->
+        </button>
+
+        <!-- Cart Toggle -->
+        <button type="button" class="nav-btn" id="cart-btn" aria-label="查看購物袋" title="購物袋">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <span class="cart-count" style="display: none;">0</span>
+        </button>
+
+        <!-- Hamburger Menu (Mobile Only) -->
+        <button type="button" class="nav-btn menu-toggle" id="menu-toggle" aria-label="開啟選單" title="導覽選單">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-tagline">2026 全新跨界潮流系列</span>
+          <h1 class="hero-title">重新定義您的<br><span>行步與穿搭美學</span></h1>
+          <p class="hero-desc">SoleVibe 融匯尖端緩震中底科技與頂級皮革編織工藝，從休閒衛衣、商務正裝，到精緻飾品配件，為您的生活日常帶來無與倫比的輕奢體驗。</p>
+          <div class="hero-buttons">
+            <a href="casual.html" class="btn btn-primary">立即選購</a>
+            <a href="about.html" class="btn btn-secondary">品牌故事</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <img src="assets/images/casual_1.png" alt="AeroWalk Knit Sneaker" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY OVERVIEW -->
+    <section class="section-padding" style="background: var(--bg-primary);">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>探索<span>主題分類</span></h2>
+          <p>嚴選頂級鞋款、時尚服飾與潮流配飾，點綴您的生活品味。</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card text-center" style="cursor: pointer;" onclick="location.href='casual.html'">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>休閒服飾</h3>
+            <p>日常潮流必備的舒適編織鞋款、百搭丹寧與落肩衛衣。</p>
+          </div>
+          <div class="feature-card text-center" style="cursor: pointer;" onclick="location.href='formal.html'">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>正式服飾</h3>
+            <p>展現睿智風采的雕花真皮德比鞋與精緻剪裁西裝外套。</p>
+          </div>
+          <div class="feature-card text-center" style="cursor: pointer;" onclick="location.href='jewelry.html'">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>飾品類</h3>
+            <p>球鞋扣飾、純銀戒指與手工編織手環，細節彰顯自我。</p>
+          </div>
+          <div class="feature-card text-center" style="cursor: pointer;" onclick="location.href='accessories.html'">
+            <div class="feature-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>配件類</h3>
+            <p>精選吸濕排汗運動襪、減震記憶鞋墊與頂級洗鞋清潔組。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section-padding" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>熱銷<span>焦點商品</span></h2>
+          <p>為您推薦本季最受歡迎的高人氣奢華鞋款與設計服飾單品。</p>
+        </div>
+
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <span class="product-card-badge">HOT</span>
+            <a href="product.html?id=casual_1" class="product-card-img-link">
+              <img src="assets/images/aerowalk_knit_grey_sneaker.jpg" alt="AeroWalk Knit Sneaker" class="product-card-img">
+            </a>
+            <div class="product-card-content">
+              <span class="product-card-cat">休閒服飾</span>
+              <h3 class="product-card-title"><a href="product.html?id=casual_1">AeroWalk 輕盈編織休閒鞋</a></h3>
+              <div class="product-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">(4.8)</span>
+              </div>
+              <div class="product-card-price-row">
+                <div class="price-box">
+                  <span class="price-curr">NT$ 2,580</span>
+                  <span class="price-orig">NT$ 3,200</span>
+                </div>
+                <button type="button" class="quick-add-cart-btn" data-id="casual_1" aria-label="加入購物車" title="加入購物車">
+                  ＋
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <span class="product-card-badge">新品</span>
+            <a href="product.html?id=formal_1" class="product-card-img-link">
+              <img src="assets/images/formal_1.png" alt="Brogue Derby Leather Shoes" class="product-card-img">
+            </a>
+            <div class="product-card-content">
+              <span class="product-card-cat">正式服飾</span>
+              <h3 class="product-card-title"><a href="product.html?id=formal_1">紳士雕花德比真皮鞋</a></h3>
+              <div class="product-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">(4.9)</span>
+              </div>
+              <div class="product-card-price-row">
+                <div class="price-box">
+                  <span class="price-curr">NT$ 4,580</span>
+                  <span class="price-orig">NT$ 5,800</span>
+                </div>
+                <button type="button" class="quick-add-cart-btn" data-id="formal_1" aria-label="加入購物車" title="加入購物車">
+                  ＋
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <span class="product-card-badge">暢銷</span>
+            <a href="product.html?id=accessories_2" class="product-card-img-link">
+              <img src="assets/images/sole_care_cleaner_kit.jpg" alt="SoleCare Cleaner Kit" class="product-card-img">
+            </a>
+            <div class="product-card-content">
+              <span class="product-card-cat">配件</span>
+              <h3 class="product-card-title"><a href="product.html?id=accessories_2">SoleCare 頂級溫和洗鞋清潔組</a></h3>
+              <div class="product-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">(4.8)</span>
+              </div>
+              <div class="product-card-price-row">
+                <div class="price-box">
+                  <span class="price-curr">NT$ 680</span>
+                  <span class="price-orig">NT$ 850</span>
+                </div>
+                <button type="button" class="quick-add-cart-btn" data-id="accessories_2" aria-label="加入購物車" title="加入購物車">
+                  ＋
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <span class="product-card-badge">舒適</span>
+            <a href="product.html?id=others_1" class="product-card-img-link">
+              <img src="assets/images/slide_ease_black_sandal.jpg" alt="SlideEase Recovery Sandals" class="product-card-img">
+            </a>
+            <div class="product-card-content">
+              <span class="product-card-cat">其它類</span>
+              <h3 class="product-card-title"><a href="product.html?id=others_1">SlideEase 運動舒緩恢復拖鞋</a></h3>
+              <div class="product-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-value">(4.8)</span>
+              </div>
+              <div class="product-card-price-row">
+                <div class="price-box">
+                  <span class="price-curr">NT$ 990</span>
+                  <span class="price-orig">NT$ 1,280</span>
+                </div>
+                <button type="button" class="quick-add-cart-btn" data-id="others_1" aria-label="加入購物車" title="加入購物車">
+                  ＋
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 4rem;">
+          <a href="casual.html" class="btn btn-secondary">瀏覽全系列商品</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER / BRAND VALUE -->
+    <section class="section-padding" style="background: radial-gradient(circle at center, var(--accent-glow) 0%, transparent 70%);">
+      <div class="container text-center" style="max-width: 650px;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">加入 SoleVibe VIP 會員</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2.5rem;">訂閱電子報，隨時接收最新的潮流趨勢分析、限量鞋款開賣消息與 VIP 專屬折扣碼。</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感謝您的訂閱！我們已將 VIP 折扣碼寄送至您的信箱。');" style="display: flex; gap: 0.5rem; justify-content: center;">
+          <input type="email" placeholder="輸入您的電子信箱" required class="form-control" style="max-width: 400px; background: var(--bg-secondary);">
+          <button type="submit" class="btn btn-primary" style="white-space: nowrap;">立即訂閱</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART SIDE DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3>您的購物袋</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn" aria-label="關閉購物袋">✕</button>
+      </div>
+      
+      <div class="cart-items-container" id="cart-items">
+        <!-- Main.js handles rendering -->
+      </div>
+      
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>小計金額</span>
+          <span class="cart-total-price" id="cart-total-price">NT$ 0</span>
+        </div>
+        <button type="button" class="btn btn-primary checkout-btn" onclick="alert('感謝您的測試購買！我們將在正式金流串接完成後上線此功能。')">
+          前往結帳流程
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL NOTIFICATION MODAL -->
+  <div class="modal-overlay" id="global-modal-overlay">
+    <div class="modal-content-card">
+      <span class="modal-success-icon">✓</span>
+      <h3>提示訊息</h3>
+      <p id="modal-text">商品已成功加入您的購物車！</p>
+      <button type="button" class="btn btn-primary" onclick="closeGlobalModal()" style="min-width: 120px;">確定</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <h3>SOLE<span style="color: var(--accent-light)">VIBE</span></h3>
+        <p>SoleVibe 以極簡美學與先進運動科技，重塑現代履歷體驗。致力於給您的雙腳帶來雲朵般的溫柔包裹與頂級避震支撐。</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+          <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+          <a href="#" class="social-icon" aria-label="Threads">TH</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>風格分类</h4>
+        <ul>
+          <li><a href="casual.html">日常休閒服飾</a></li>
+          <li><a href="formal.html">紳士商務服飾</a></li>
+          <li><a href="others.html">運動戶外其它</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>潮流配飾</h4>
+        <ul>
+          <li><a href="jewelry.html">設計師款飾品</a></li>
+          <li><a href="accessories.html">機能鞋用配件</a></li>
+          <li><a href="accessories.html">鞋類保養清潔</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>品牌服務</h4>
+        <ul>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="contact.html#faq">常見問題 FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2026 SoleVibe Premium Corp. 版權所有。本網站所有內容僅供展示與作品集使用。</p>
+      <p style="color: var(--text-muted);">設計與開發：Antigravity Coding Assistant</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT CONTROLLERS -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

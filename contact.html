@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們 | SoleVibe 客戶支援與常見問題 FAQ</title>
+  <meta name="description" content="有任何商品、訂單或門市合作的疑問嗎？請填寫聯絡表單，或查閱我們的常見問題解答。SoleVibe 團隊將於 24 小時內竭誠回覆您的諮詢。">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="SoleVibe Logo" class="logo-img">
+        <span>SOLE<span style="color: var(--accent-light)">VIBE</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="about.html">公司簡介</a></li>
+          <li><a href="casual.html">休閒服飾</a></li>
+          <li><a href="formal.html">正式服飾</a></li>
+          <li><a href="jewelry.html">飾品</a></li>
+          <li><a href="accessories.html">配件</a></li>
+          <li><a href="others.html">其它類</a></li>
+          <li><a href="contact.html" class="active">聯絡我們</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-btn" id="theme-toggle-btn" aria-label="切換主題" title="切換深淺色主題"></button>
+        <button type="button" class="nav-btn" id="cart-btn" aria-label="查看購物袋" title="購物袋">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <span class="cart-count" style="display: none;">0</span>
+        </button>
+        <button type="button" class="nav-btn menu-toggle" id="menu-toggle" aria-label="開啟選單" title="導覽選單">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="page-header text-center">
+      <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">聯絡我們</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">我們的團隊非常樂意為您提供各類諮詢與售後協助</p>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM & INFO -->
+    <section class="section-padding">
+      <div class="container contact-grid">
+        <!-- Info Card -->
+        <div class="contact-info-card">
+          <div class="contact-info-item">
+            <h4>實體旗艦店</h4>
+            <p>台北市信義區松壽路 11 號 (信義新天地 A11 館 3 樓)</p>
+            <p style="color: var(--text-muted); font-size: 0.875rem;">週日至週四 11:00 - 21:30 / 週五至週六 11:00 - 22:00</p>
+          </div>
+          
+          <div class="contact-info-item">
+            <h4>客戶服務專線</h4>
+            <p>+886 (02) 2758-8888</p>
+            <p style="color: var(--text-muted); font-size: 0.875rem;">服務時間：工作日 09:30 - 18:30</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h4>電子郵件聯絡</h4>
+            <p>support@solevibe-premium.com</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h4>媒體與商務合作</h4>
+            <p>collab@solevibe-premium.com</p>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="contact-form-box">
+          <h3 style="font-size: 1.75rem; margin-bottom: 2rem;">填寫諮詢表單</h3>
+          
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="form-name">您的姓名 *</label>
+              <input type="text" id="form-name" class="form-control" required placeholder="例如：王小明">
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">您的電子信箱 *</label>
+              <input type="email" id="form-email" class="form-control" required placeholder="example@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject">諮詢主題 *</label>
+              <input type="text" id="form-subject" class="form-control" required placeholder="例如：尺碼退換貨疑問 / 合作事宜">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">留言內容 *</label>
+              <textarea id="form-message" class="form-control" required placeholder="請詳細寫下您的問題..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">送出訊息</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>常見問題<span>解答 FAQ</span></h2>
+          <p>在聯絡我們之前，您可以先參考以下常見問題，能更快解答您的疑問。</p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Q1. 商品提供多久的鑑賞期？如何辦理退換貨？</span>
+              <span class="faq-icon">＋</span>
+            </div>
+            <div class="faq-answer">
+              <p>我們提供商品收訖起算 7 天的鑑賞期（非試用期）。若您需要辦理退換貨，請確保商品為全新未使用狀態、包裝吊牌完整，並透過客服信箱或填寫此頁面表單與我們聯繫。我們將安排物流到府收件，換貨運費由 SoleVibe 負擔。</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Q2. 下單後大概幾天可以收到商品？</span>
+              <span class="faq-icon">＋</span>
+            </div>
+            <div class="faq-answer">
+              <p>一般商品於下單完成付款後 1-2 個工作日內出貨。台灣本島地區配送，宅配約需 1-2 天，超商取貨約需 2-3 天送達指定門市。限量預購鞋款之配送時間，則以商品頁面公告為主。</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Q3. 如果買鞋子回去尺寸不合，可以更換尺碼嗎？</span>
+              <span class="faq-icon">＋</span>
+            </div>
+            <div class="faq-answer">
+              <p>可以的！若您試穿後發現尺寸不合適（請於乾淨室內地板試穿），可在收到商品 7 天之內申請免費更換尺碼一次。若該款式所需尺碼已無庫存，可申請更換其他款式或全額退款。</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Q4. SoleCare 洗鞋清潔組適用於哪些材質？</span>
+              <span class="faq-icon">＋</span>
+            </div>
+            <div class="faq-answer">
+              <p>SoleCare 洗鞋組採用 98.3% 天然溫和溫和配方，適用於絕大多數常見材質，包括：天然皮革、人造皮革、帆布、尼龍、網布等。對於麂皮（Suede）與磨砂革（Nubuck），建議使用附贈的天然馬毛刷「微濕」刷洗，並在陰涼處自然風乾。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART SIDE DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3>您的購物袋</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn" aria-label="關閉購物袋">✕</button>
+      </div>
+      <div class="cart-items-container" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>小計金額</span>
+          <span class="cart-total-price" id="cart-total-price">NT$ 0</span>
+        </div>
+        <button type="button" class="btn btn-primary checkout-btn" onclick="alert('感謝您的測試購買！')">前往結帳</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL NOTIFICATION MODAL -->
+  <div class="modal-overlay" id="global-modal-overlay">
+    <div class="modal-content-card">
+      <span class="modal-success-icon">✓</span>
+      <h3>成功</h3>
+      <p id="modal-text">表單提交成功！</p>
+      <button type="button" class="btn btn-primary" onclick="closeGlobalModal()">確定</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <h3>SOLE<span style="color: var(--accent-light)">VIBE</span></h3>
+        <p>SoleVibe 以極簡美學與先進運動科技，重塑現代履歷體驗。</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">IG</a>
+          <a href="#" class="social-icon">TH</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>風格分类</h4>
+        <ul>
+          <li><a href="casual.html">日常休閒服飾</a></li>
+          <li><a href="formal.html">紳士商務服飾</a></li>
+          <li><a href="others.html">運動戶外其它</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>潮流配飾</h4>
+        <ul>
+          <li><a href="jewelry.html">設計師款飾品</a></li>
+          <li><a href="accessories.html">機能鞋用配件</a></li>
+          <li><a href="accessories.html">鞋類保養清潔</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>品牌服務</h4>
+        <ul>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="contact.html#faq">常見問題 FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 SoleVibe Premium Corp. 版權所有。</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT CONTROLLERS -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ Accordion Toggle Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+        question.addEventListener("click", () => {
+          // Toggle active
+          const isActive = item.classList.contains("active");
+          
+          // Close others
+          faqItems.forEach(other => other.classList.remove("active"));
+          
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+    });
+
+    // Contact Form Submission Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("form-name").value;
+      const email = document.getElementById("form-email").value;
+      
+      // Reset form
+      document.getElementById("contact-form").reset();
+      
+      // Show success modal
+      showGlobalNotification(`感謝您，${name}！您的諮詢表單已提交成功。我們已發送確認信件至 ${email}，客服專員將在 24 小時內回覆您。`);
+    }
+  </script>
+</body>
+</html>
