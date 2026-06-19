@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>其它類 | SoleVibe 戶外防雨機能靴與運動修復拖鞋</title>
+  <meta name="description" content="選購 SoleVibe 其它類產品，包含 SlideEase 舒緩恢復拖鞋、RainShield 防水機能靴與專業避震慢跑鞋。滿足您戶外探險與運動後放鬆的多元需求。">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="SoleVibe Logo" class="logo-img">
+        <span>SOLE<span style="color: var(--accent-light)">VIBE</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="about.html">公司簡介</a></li>
+          <li><a href="casual.html">休閒鞋款</a></li>
+          <li><a href="formal.html">正式鞋款</a></li>
+          <li><a href="sports.html">運動鞋款</a></li>
+          <li><a href="accessories.html">鞋材與配件</a></li>
+          <li><a href="others.html" class="active">其它類</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-btn" id="theme-toggle-btn" aria-label="切換主題" title="切換深淺色主題"></button>
+        <button type="button" class="nav-btn" id="cart-btn" aria-label="查看購物袋" title="購物袋">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <span class="cart-count" style="display: none;">0</span>
+        </button>
+        <button type="button" class="nav-btn menu-toggle" id="menu-toggle" aria-label="開啟選單" title="導覽選單">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="page-header text-center">
+      <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">其它商品</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">精選運動恢復拖鞋、奈米防潑水越野機能靴與科技緩震慢跑鞋</p>
+      </div>
+    </section>
+
+    <section class="section-padding" style="padding-top: 3rem;">
+      <div class="container">
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+          <span class="filter-count" id="product-count">顯示 0 件商品</span>
+          
+          <div class="filter-controls">
+            <!-- Search -->
+            <input type="text" id="search-input" class="form-control" placeholder="搜尋此分類商品..." style="padding: 0.4rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; width: 200px; background: var(--bg-tertiary);">
+            
+            <!-- Sort -->
+            <div class="select-wrapper">
+              <select id="sort-select" aria-label="商品排序">
+                <option value="default">預設排序</option>
+                <option value="price-low">價格：低到高</option>
+                <option value="price-high">價格：高到低</option>
+                <option value="rating">依評分高低</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid" id="category-products">
+          <div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
+            <p style="color: var(--text-muted);">正在為您尋找最棒的機能單品...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART SIDE DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3>您的購物袋</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn" aria-label="關閉購物袋">✕</button>
+      </div>
+      <div class="cart-items-container" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>小計金額</span>
+          <span class="cart-total-price" id="cart-total-price">NT$ 0</span>
+        </div>
+        <button type="button" class="btn btn-primary checkout-btn" onclick="alert('感謝您的測試購買！')">前往結帳</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL NOTIFICATION MODAL -->
+  <div class="modal-overlay" id="global-modal-overlay">
+    <div class="modal-content-card">
+      <span class="modal-success-icon">✓</span>
+      <h3>提示訊息</h3>
+      <p id="modal-text">商品已成功加入您的購物車！</p>
+      <button type="button" class="btn btn-primary" onclick="closeGlobalModal()">確定</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <h3>SOLE<span style="color: var(--accent-light)">VIBE</span></h3>
+        <p>SoleVibe 以極簡美學與先進運動科技，重塑現代履歷體驗。</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">IG</a>
+          <a href="#" class="social-icon">TH</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>風格分类</h4>
+        <ul>
+          <li><a href="casual.html">日常休閒鞋款</a></li>
+          <li><a href="formal.html">紳士正裝鞋款</a></li>
+          <li><a href="sports.html">專業運動鞋款</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>潮流配飾</h4>
+        <ul>
+          <li><a href="accessories.html">機能鞋材配件</a></li>
+          <li><a href="accessories.html">鞋類保養清潔</a></li>
+          <li><a href="others.html">生活其它鞋款</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>品牌服務</h4>
+        <ul>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="contact.html#faq">常見問題 FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 SoleVibe Premium Corp. 版權所有。</p>
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT CONTROLLERS -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const CURRENT_CATEGORY = "others";
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProducts();
+      
+      const searchInput = document.getElementById("search-input");
+      const sortSelect = document.getElementById("sort-select");
+      
+      if (searchInput) searchInput.addEventListener("input", renderProducts);
+      if (sortSelect) sortSelect.addEventListener("change", renderProducts);
+    });
+
+    function renderProducts() {
+      const container = document.getElementById("category-products");
+      const countEl = document.getElementById("product-count");
+      if (!container) return;
+
+      const query = (document.getElementById("search-input")?.value || "").toLowerCase().trim();
+      const sortVal = document.getElementById("sort-select")?.value || "default";
+
+      let filtered = shoeProducts.filter(p => p.category === CURRENT_CATEGORY);
+      if (query) {
+        filtered = filtered.filter(p => 
+          p.zhName.toLowerCase().includes(query) || 
+          p.name.toLowerCase().includes(query) || 
+          p.description.toLowerCase().includes(query)
+        );
+      }
+
+      if (sortVal === "price-low") {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortVal === "price-high") {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortVal === "rating") {
+        filtered.sort((a, b) => b.rating - a.rating);
+      }
+
+      if (countEl) countEl.textContent = `顯示 ${filtered.length} 件商品`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 4rem;">
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1rem;">找不到符合的商品</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('search-input').value=''; renderProducts();">清除搜尋</button>
+          </div>`;
+        return;
+      }
+
+      let gridHTML = "";
+      filtered.forEach(p => {
+        gridHTML += `
+          <div class="product-card">
+            ${p.tag ? `<span class="product-card-badge">${p.tag}</span>` : ''}
+            <a href="product.html?id=${p.id}" class="product-card-img-link">
+              <img src="${p.image}" alt="${p.name}" class="product-card-img">
+            </a>
+            <div class="product-card-content">
+              <span class="product-card-cat">${p.categoryZh}</span>
+              <h3 class="product-card-title"><a href="product.html?id=${p.id}">${p.zhName}</a></h3>
+              <div class="product-card-rating">
+                <span class="stars">${'★'.repeat(Math.round(p.rating))}${'☆'.repeat(5 - Math.round(p.rating))}</span>
+                <span class="rating-value">(${p.rating})</span>
+              </div>
+              <div class="product-card-price-row">
+                <div class="price-box">
+                  <span class="price-curr">NT$ ${p.price.toLocaleString()}</span>
+                  ${p.originalPrice ? `<span class="price-orig">NT$ ${p.originalPrice.toLocaleString()}</span>` : ''}
+                </div>
+                <button type="button" class="quick-add-cart-btn" data-id="${p.id}" aria-label="加入購物車" title="加入購物車">
+                  ＋
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = gridHTML;
+    }
+  </script>
+</body>
+</html>
